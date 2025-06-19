@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <style>
+        body{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: aqua;
+        }
+        h1,h2{
+            text-align: center;
+        }
+        .input-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        #input-todo{
+            width: 250px;
+            height: 25px;
+            font-size: 1.25rem;
+        }
+        #add-todo{
+            height: 40px;
+            width: 40px;
+            border-radius: 20px;
+            border: none;
+            background-color: lightgreen;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        .todo-container{
+            
+            width: 80vw;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .todo{
+            background-color: lightsteelblue;
+            display: flex;
+            flex-direction: space-between;
+            padding: 0px 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ToDo List</h1>
+    <form action="{{url_for('home')}}" class="input-container">
+        <input type="text" placeholder="enter Todo" id="todo_name">
+        <button type="add-todo">+</button>
+    </form>
+    <h2> ToDos</h2>
+    <div class="todo-container">
+        <div class="todo">
+            <p>AWS</p>
+            <div class="actions">
+                <form action="">
+                    <input type="checkbox">
+                    <button>Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="todo-container">
+        <div class="todo">
+            <p>AWS</p>
+            <div class="actions">
+                <form action="">
+                    <input type="checkbox">
+                    <button>Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="todo-container">
+        <div class="todo">
+            <p>AWS</p>
+            <div class="actions">
+                <form action="">
+                    <input type="checkbox">
+                    <button>Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
